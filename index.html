@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Warcraft</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <script id="handlebars" type="text/x-handlebars-template">
+
+       <div>
+          My name is {{name}}. I the {{title}}. 
+
+          <br>
+          <br>
+
+          {{#each people}}
+
+            <!-- Here the context is each individual person. So we can access its properties directly: -->
+            <p>{{firstName}} {{lastName}}</p>
+
+          {{/each}} 
+
+          <br>
+          <br>
+
+          {{#each animals}}
+            <p>
+              The {{capitalize this.name}} says
+              {{#if this.noise}}
+                "{{this.noise}}".
+              {{else}}
+                nothing since its a {{this.name}}.
+              {{/if}}
+            </p>
+          {{/each}}
+
+          <br>
+          <br>
+
+          <p> The <b> {{#uppercase}} konami {{/uppercase}} </b> Code is a cheat code that appears in many video games.</p>
+
+          <p>During the title screen before the game demo begins, the player could press the following sequence of buttons on the game controller to enable the cheat:</p>
+
+          <p>{{#uppercase}}{{code}}{{/uppercase}}</p>
+
+          <p>The code is also present as an Easter egg on a number of websites.</p>
+
+       </div>
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="C:/Users/Abraham/Documents/GitHub/handlebars/index.js"></script>
+
+  </body>
+</html>
